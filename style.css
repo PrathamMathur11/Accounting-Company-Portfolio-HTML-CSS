@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  margin: 0 0 1rem 0;
+}
+
+/* Header Styles */
+
+header {
+  position: sticky !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  line-height: 70px;
+  padding: 0 1.5rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+ul#mobile-nav-list {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.large-nav > ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.large-nav > ul > li,
+.mobile-nav > ul > li {
+  /* font-weight: 700; */
+  font: normal normal normal 25px/5rem sans-serif;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a:hover {
+  color: gray;
+}
+
+input#open-close-menu {
+  display: none;
+}
+
+label.open-close-menu {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+label.open-close-menu > ion-icon {
+  padding: 1rem;
+  transition: all 0.4s ease 0s;
+}
+
+label.open-close-menu > ion-icon:hover {
+  background-color: black;
+  color: #fff;
+  border-radius: 10px;
+}
+
+input#open-close-menu:checked ~ ul#mobile-nav-list {
+  display: block;
+  /* width: 18.75rem; */
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+}
+
+.hero-images-container {
+  width: 50%;
+  height: 40rem;
+  background-repeat: no-repeat;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+}
+
+.hero-image-main {
+  z-index: 20;
+  object-fit: cover;
+  object-position: 55% 26%;
+  width: fit-content;
+}
+
+.hero-content {
+  width: 50%;
+  padding: 10rem;
+  display: grid;
+  align-self: stretch;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero-button {
+  font-size: 16px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid white;
+  cursor: pointer;
+  background: linear-gradient(to left, transparent 50%, white 50%) right;
+  background-size: 200%;
+  transition: all 0.4s ease 0s;
+}
+
+.hero-button:is(:hover, :focus) {
+  color: #000;
+  background-position: left;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 5rem 30rem;
+}
+
+.card-title > h2 {
+  font-size: 2rem;
+}
+
+.card-button > button.contact {
+  font-size: 16px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  background: linear-gradient(to left, transparent 50%, black 50%) right;
+  background-size: 200%;
+  transition: all 0.4s ease 0s;
+  padding: 0.625rem 0.9375rem;
+}
+
+.card-button > button.contact:is(:hover, :focus) {
+  color: #fff;
+  background-position: left;
+}
+
+.card-text > p {
+  font-size: 16px;
+  /* text-align: center; */
+  letter-spacing: 0.03rem;
+  line-height: 1.8;
+}
+
+.card-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 1rem; */
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.card-group .services-card {
+  text-align: center;
+  width: 33.33%;
+  max-width: 100%;
+  position: relative;
+  display: grid;
+  left: 0;
+overflow: hidden;
+}
+
+.services-card .service-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.service-card-content {
+  display: grid;
+  padding: 2rem;
+  margin: 40px 0;
+}
+
+.service-card-content h3 {
+  font-size: 2rem;
+}
+
+.service-card-content p {
+  margin-top: 30px;
+  font-size: 16px;
+  /* text-align: center; */
+  letter-spacing: 0.03rem;
+  line-height: 1.8;
+}
+
+/* What We Offer section */
+
+.offer-card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 5rem 30rem;
+}
+
+.offer-card-title > h2 {
+  font-size: 2rem;
+}
+
+.offer-card-button > button.contact {
+  font-size: 16px;
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  background: linear-gradient(to left, transparent 50%, black 50%) right;
+  background-size: 200%;
+  transition: all 0.4s ease 0s;
+  padding: 0.625rem 0.9375rem;
+}
+
+.offer-card-button > button.contact:is(:hover, :focus) {
+  color: #fff;
+  background-position: left;
+}
+
+.offer-card-text > p {
+  font-size: 16px;
+  /* text-align: center; */
+  letter-spacing: 0.03rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul#mobile-nav-list {
+    position: absolute;
+    min-width: 0;
+    /* max-width: 18.75rem; */
+    max-width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    min-height: -webkit-fill-available;
+  }
+  .large-nav {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-images-container {
+    width: 100% !important;
+    order: 2;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    padding: 5rem !important;
+    gap: 2rem;
+  }
+
+  .hero-button {
+    font-size: 16px;
+    padding: 1rem;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid white;
+    cursor: pointer;
+    background: linear-gradient(to left, transparent 50%, white 50%) right;
+    background-size: 200%;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    padding: 2rem;
+  }
+
+  .offer-card {
+    padding: 2rem;
+  }
+
+  .hero-content {
+    padding: 7rem 5.6rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-text,
+  .card-button {
+    display: none;
+  }
+
+  .card-group {
+    flex-direction: column !important;
+  }
+  .card-group .services-card {
+    width: 100% !important;
+  }
+
+  .services-card #changed-order {
+    order: 2 !important;
+  }
+}
